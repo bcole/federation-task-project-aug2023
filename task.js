@@ -44,6 +44,9 @@ export async function buildSubgraph(port) {
         };
       },
     },
+    Task: {
+      name: ({ id }) => `Task name ${id}`,
+    },
   };
 
   const schema = buildSubgraphSchema({ typeDefs, resolvers });
